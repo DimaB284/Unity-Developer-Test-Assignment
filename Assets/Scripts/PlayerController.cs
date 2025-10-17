@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            //sr.color = Color.cyan;
         }
 
         if (isGrounded && sr.color != originalColor)
@@ -43,4 +42,5 @@ public class PlayerController : MonoBehaviour
         isGrounded = false;
     }
 }
+
 

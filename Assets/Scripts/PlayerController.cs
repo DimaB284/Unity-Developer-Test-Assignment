@@ -32,15 +32,16 @@ public class PlayerController : MonoBehaviour
             sr.color = Color.Lerp(sr.color, originalColor, Time.deltaTime * 5f);
     }
 
-    /*void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.contacts[0].normal.y > 0.5f)
             isGrounded = true;
-    }*/
+    }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
     }
 }
+
 

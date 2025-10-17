@@ -25,22 +25,22 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            sr.color = Color.red;
         }
 
         if (isGrounded && sr.color != originalColor)
             sr.color = Color.Lerp(sr.color, originalColor, Time.deltaTime * 5f);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.contacts[0].normal.y > 0.5f)
             isGrounded = true;
-    }
+    }*/
 
     void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
     }
 }
-
 
